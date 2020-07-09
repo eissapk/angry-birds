@@ -1,0 +1,13 @@
+@if $direction=='en' {
+    $floatLeft: left;
+    $floatRight: right;
+    $textLeft: left;
+    $textRight: right;
+}
+
+@else {
+    $floatLeft: right;
+    $floatRight: left;
+    $textLeft: right;
+    $textRight: left;
+}

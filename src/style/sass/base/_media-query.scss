@@ -1,0 +1,14 @@
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+/* START MAIN */
+#loader {
+    @include tablet {
+        .loaderBarCon {
+            width: 400px;
+        }
+    }
+}
+
+/* END MAIN */

@@ -1,0 +1,64 @@
+// normal button
+button {
+    background: $blue;
+    color: $white;
+    // width: 100px;
+    padding: 0 10px;
+    height: 50px;
+    line-height: 50px;
+    border: 0;
+    border-radius: $radius;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+
+    &:active {
+        @include btnAnimation;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px $mainTextColor;
+    }
+
+}
+
+// close button
+.xBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    div {
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+    }
+
+    span {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: block;
+        width: 2px;
+        height: 30px;
+        background-color: $subTextColor;
+        transform: rotate(45deg);
+
+        &:last-child {
+            transform: rotate(-45deg);
+        }
+    }
+
+}

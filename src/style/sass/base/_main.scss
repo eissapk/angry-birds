@@ -1,0 +1,47 @@
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+* {
+    @include reset;
+
+    &::before {
+        @include reset;
+    }
+
+    &::after {
+        @include reset;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $mainTextColor;
+}
+
+html,
+body {
+    @include reset;
+    @include body;
+    @include hideNumArrow;
+}
+
+body {
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    min-height: calc(100vh - 40px);
+    background: $mainTextColor;
+}

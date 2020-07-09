@@ -1,0 +1,15 @@
+footer {
+    background-color: $mainTextColor;
+    text-align: center;
+    min-height: 40px;
+    line-height: 39px;
+    border-top: 1px solid #222427;
+
+    p {
+        color: $white;
+
+        a {
+            color: $yellow;
+        }
+    }
+}

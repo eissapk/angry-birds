@@ -1,0 +1,225 @@
+// helpers
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+// !components
+/* Start spinner */
+@import "../components/spinner";
+/* End spinner */
+
+/* Start buttons */
+@import "../components/buttons";
+/* End buttons */
+
+/* Start header */
+@import "../layout/header";
+/* End header */
+
+//* Start actualPage
+
+// loader
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 20;
+    background-color: $mainTextColor;
+}
+
+main {
+
+    //! hide assets
+    #assets {
+        display: none;
+
+        img {
+            display: none;
+        }
+    }
+
+    // intro
+    #gameIntro {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 280px;
+
+        // logo
+        #logo {
+            width: 100%;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+
+            #logo-img {
+                width: 150px;
+            }
+
+            #logo-title {
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
+
+        // buttons
+        #buttonsCon {
+            margin-top: 20px;
+
+            button {
+                width: 200px;
+                display: block;
+                margin: 0 auto;
+                font-size: 20px;
+                font-weight: bold;
+                background: $red;
+                border: 1px solid #222427;
+            }
+        }
+
+        // how to play
+        #instructions {
+            section {
+                padding: 20px;
+                font-size: 0.9em;
+                text-align: center;
+
+                h2 {
+                    color: $yellow;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    color: $white;
+                    line-height: 26px;
+                }
+            }
+        }
+
+    }
+
+    //* game container
+    #gameContainer {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 400px;
+        box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+
+        // details
+        #detailsCon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            #info {
+                float: $floatRight;
+                padding: 10px 10px 0 0;
+
+                >div {
+                    color: white;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    text-align: right;
+
+                    &:last-of-type {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            #pauseCon {
+                float: $floatLeft;
+                padding: 10px 0 0 10px;
+
+                button {
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    background-color: transparent;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+
+                    svg {
+                        @extend %overlay;
+                        fill: $white;
+                    }
+                }
+
+                #resume {
+                    display: none;
+                }
+            }
+        }
+
+        // game over
+        #gameOver {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            display: none;
+            text-transform: capitalize;
+
+            h1 {
+                color: $white;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+            }
+
+            #highestScore {
+                color: $white;
+                margin-bottom: 20px;
+                font-weight: bold;
+                text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+            }
+
+            button {
+                width: 110px;
+                height: 40px;
+                line-height: 40px;
+                display: block;
+                margin: 0 auto 10px;
+            }
+
+            a {
+                width: 110px;
+                height: 40px;
+                line-height: 40px;
+                background-color: $blue;
+                display: block;
+                color: $white;
+                border-radius: $radius;
+                font-weight: bold;
+                margin: 0 auto;
+            }
+        }
+
+        // canvas
+        #canvas {
+            background-color: $mainTextColor;
+            border-radius: 5px;
+        }
+    }
+}
+
+//* End actualPage
+
+/* Start footer */
+@import "../layout/footer";
+/* End footer */
